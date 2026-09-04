@@ -106,7 +106,7 @@ export function TicTacToe() {
   return (
     <div className="flex flex-col items-center gap-5">
       <p className="text-xs text-text-dim">
-        You&apos;re <span className="text-cyan">X</span>. The AI plays perfectly — a
+        You&apos;re <span className="text-cyan">X</span>. The AI plays perfectly, so a
         draw is a win.
       </p>
       <div className="grid grid-cols-3 gap-2 w-full max-w-[260px]">

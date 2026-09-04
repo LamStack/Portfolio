@@ -1,15 +1,15 @@
 export const experience = [
   {
     role: "Project Coordinator",
-    org: "GITEX 2025 — Tech Innovators Program",
+    org: "GITEX Global 2025 (Tech Innovators Program)",
     period: "2025 · 1 week",
     description:
-      "Coordinated a one-week sprint representing a project — Wafid, an AI travel companion — at GITEX Dubai as part of the Tech Innovators program, managing logistics, stakeholder conversations, and the on-floor pitch.",
+      "Led a team of students to present and demonstrate a group of projects at GITEX Global 2025, including an Azure AI language-learning chatbot. Engaged visitors, explained technical concepts to both technical and non-technical audiences, and represented the project in a professional environment.",
   },
   {
     role: "Automation Intern",
-    org: "DOO — Builders League Program",
-    period: "Aug 2 – Sep 2, 2026",
+    org: "DOO (Builders League Program)",
+    period: "Aug 2 to Sep 2, 2026",
     description:
       "One-month internship with DOO's Builders League program, building automation-focused prototypes and shipping working demos under real time constraints.",
   },
@@ -17,9 +17,9 @@ export const experience = [
 
 export const volunteering = [
   {
-    role: "Volunteer — Guide & Organizer",
+    role: "Volunteer, Guide & Organizer",
     org: "University of Bahrain",
-    period: "2026 – 2027",
+    period: "2026 to 2027",
     description:
       "Guided colleagues around campus and helped organize the 2026/2027 induction week as a returning volunteer.",
   },
@@ -52,11 +52,11 @@ export const achievements = [
     org: "Startup Bahrain",
     date: "May 2026",
     description:
-      "Semi-finalist for developing Auctor, an AI ecosystem redefining hiring through real-world problem-solving analysis — placed 4th and won the DOO Automation Award along the way.",
+      "Semi-finalist for developing Auctor, an AI ecosystem redefining hiring through real-world problem-solving analysis. Placed 4th and won the DOO Automation Award along the way.",
     image: "/images/award-doo.jpg",
   },
   {
-    title: "1st Place — Senior Projects Exhibition",
+    title: "1st Place, Senior Projects Exhibition",
     org: "University of Bahrain",
     date: "2026",
     description:
@@ -64,7 +64,7 @@ export const achievements = [
     image: "/images/award-senior-projects.jpg",
   },
   {
-    title: "5th Place — AWS AI GameDay Challenge",
+    title: "5th Place, AWS AI GameDay Challenge",
     org: "AWS",
     date: "2026",
     description:
@@ -72,7 +72,7 @@ export const achievements = [
     image: "/images/award-aws-gameday.jpg",
   },
   {
-    title: "Exhibitor — BITEX / MEET ICT 2025",
+    title: "Exhibitor, BITEX / MEET ICT 2025",
     org: "BITEX",
     date: "2025",
     description:
@@ -118,33 +118,35 @@ export const certifications = [
 ];
 
 export const skills = {
-  Languages: ["Java", "C/C++", "Python", "TypeScript", "JavaScript"],
-  "AI & Cloud": [
-    "Machine Learning",
-    "Azure AI Solutions",
-    "Computer Vision",
+  Programming: ["Python", "Java", "C/C++", "C#"],
+  Web: ["HTML", "CSS", "JavaScript", "Next.js", "React", "Streamlit"],
+  "AI & Tools": [
+    "Azure AI",
+    "OpenAI APIs",
+    "MongoDB",
     "NLP",
-    "Generative AI",
-    "Document Intelligence",
+    "Computer Vision",
+    "Embedded Systems",
   ],
-  Engineering: ["Embedded Systems", "Microcontrollers", "Next.js", "React"],
+  Hardware: ["Raspberry Pi", "Arduino", "Unity", "Twilio"],
   "Working with people": [
     "Leadership",
     "Communication",
-    "Problem-Solving",
+    "Problem Solving",
     "Critical Thinking",
+    "Teamwork",
   ],
 };
 
 export const education = {
   school: "University of Bahrain",
   degree: "Bachelor of Computer Engineering",
-  period: "2022 – 2026, Current",
+  period: "2022 to 2026, Current",
 };
 
 export const socials = {
   github: "https://github.com/LamStack",
   linkedin: "https://www.linkedin.com/in/lamees-adel/",
-  email: "lameesadel2017@gmail.com",
+  email: "lamees1dawood@outlook.com",
   cv: "/cv/Lamees-Adel-CV.pdf",
 };

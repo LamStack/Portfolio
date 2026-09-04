@@ -75,7 +75,7 @@ export function ReactionGame() {
       ? "Click now!"
       : phase === "clicked-early"
       ? "Too soon! Tap to retry"
-      : `${reaction} ms — tap to try again`;
+      : `${reaction} ms, tap to try again`;
 
   return (
     <div className="flex flex-col items-center gap-5">
@@ -90,10 +90,10 @@ export function ReactionGame() {
       </motion.button>
       <div className="flex gap-8 text-sm text-text-dim">
         <span>
-          Last: <span className="text-text font-medium">{reaction ?? "—"} ms</span>
+          Last: <span className="text-text font-medium">{reaction ?? "n/a"} ms</span>
         </span>
         <span>
-          Best: <span className="text-cyan font-medium">{best ?? "—"} ms</span>
+          Best: <span className="text-cyan font-medium">{best ?? "n/a"} ms</span>
         </span>
       </div>
     </div>

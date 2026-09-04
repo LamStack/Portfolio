@@ -17,9 +17,9 @@ const SITE_URL = "https://lameesadel.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Lamees Adel — Computer Engineer & AI Builder",
+  title: "Lamees Adel, Computer Engineer & AI Builder",
   description:
-    "Portfolio of Lamees Adel — Computer Engineering student, Azure AI Engineer Associate, and builder of AI products like Auctor, Wafid, and BlinkTalk. Explore projects, experience, and a couple of mini games.",
+    "Portfolio of Lamees Adel: Computer Engineering student, Azure AI Engineer Associate, and builder of AI products like Auctor, Wafid, and BlinkTalk. Explore it as an interactive desktop, complete with a working terminal and a mini arcade.",
   keywords: [
     "Lamees Adel",
     "Computer Engineer",
@@ -30,9 +30,8 @@ export const metadata: Metadata = {
     "University of Bahrain",
   ],
   openGraph: {
-    title: "Lamees Adel — Computer Engineer & AI Builder",
-    description:
-      "Projects, experience, certifications, and a couple of mini games from Lamees Adel.",
+    title: "Lamees Adel, Computer Engineer & AI Builder",
+    description: "Projects, experience, certifications, and a mini arcade, as an interactive desktop.",
     url: SITE_URL,
     siteName: "Lamees Adel",
     images: ["/images/profile.jpg"],
@@ -40,9 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lamees Adel — Computer Engineer & AI Builder",
-    description:
-      "Projects, experience, certifications, and a couple of mini games from Lamees Adel.",
+    title: "Lamees Adel, Computer Engineer & AI Builder",
+    description: "Projects, experience, certifications, and a mini arcade, as an interactive desktop.",
     images: ["/images/profile.jpg"],
   },
 };
@@ -53,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg text-text">{children}</body>
+      <body className="h-full overflow-hidden bg-bg text-text">{children}</body>
     </html>
   );
 }
