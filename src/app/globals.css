@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #06070f;
+  --bg-soft: #0b0d1c;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f4f5fb;
+  --text-dim: #9498b8;
+  --cyan: #4ff0ff;
+  --violet: #a78bfa;
+  --pink: #ff6fb0;
+  --amber: #ffcf6b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-text-dim: var(--text-dim);
+  --color-cyan: var(--cyan);
+  --color-violet: var(--violet);
+  --color-pink: var(--pink);
+  --color-amber: var(--amber);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+}
+
+::selection {
+  background: var(--cyan);
+  color: #06070f;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cyan), var(--violet));
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--cyan), var(--violet) 55%, var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-25px, 25px) scale(0.95); }
+}
+.animate-blob {
+  animation: blob 16s infinite ease-in-out;
+}
+.animation-delay-2000 {
+  animation-delay: -5s;
+}
+.animation-delay-4000 {
+  animation-delay: -10s;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.card-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+}
