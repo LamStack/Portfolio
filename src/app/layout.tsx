@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Lamees Adel, Computer Engineer & AI Builder",
   description:
-    "Portfolio of Lamees Adel: Computer Engineering student, Azure AI Engineer Associate, and builder of AI products like Auctor, Wafid, and BlinkTalk. Explore it as an interactive desktop, complete with a working terminal and a mini arcade.",
+    "Portfolio of Lamees Adel: Computer Engineering student, Azure AI Engineer Associate, and builder of AI products like Auctor, Wafid, and BlinkTalk.",
   keywords: [
     "Lamees Adel",
     "Computer Engineer",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Lamees Adel, Computer Engineer & AI Builder",
-    description: "Projects, experience, certifications, and a mini arcade, as an interactive desktop.",
+    description: "Projects, experience, certifications, and a mini arcade.",
     url: SITE_URL,
     siteName: "Lamees Adel",
     images: ["/images/profile.jpg"],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Lamees Adel, Computer Engineer & AI Builder",
-    description: "Projects, experience, certifications, and a mini arcade, as an interactive desktop.",
+    description: "Projects, experience, certifications, and a mini arcade.",
     images: ["/images/profile.jpg"],
   },
 };
@@ -49,9 +49,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
     >
-      <body className="h-full overflow-hidden bg-bg text-text">{children}</body>
+      <body className="bg-bg text-text">{children}</body>
     </html>
   );
 }

@@ -12,6 +12,8 @@
   --violet: #a78bfa;
   --pink: #ff6fb0;
   --amber: #ffcf6b;
+  --lime: #baff5e;
+  --orange: #ff8a4c;
 }
 
 @theme inline {
@@ -24,16 +26,14 @@
   --color-violet: var(--violet);
   --color-pink: var(--pink);
   --color-amber: var(--amber);
+  --color-lime: var(--lime);
+  --color-orange: var(--orange);
   --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-inter);
 }
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
