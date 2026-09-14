@@ -42,8 +42,8 @@ export function Contact() {
           <span className="h-px w-6 bg-cyan" /> Get in touch
         </span>
         <h2 className="contact-reveal font-display mt-5 text-4xl sm:text-6xl font-bold leading-tight">
-          Let&apos;s build something{" "}
-          <span className="text-gradient">worth playing with.</span>
+          Got something{" "}
+          <span className="text-gradient">worth building together?</span>
         </h2>
         <p className="contact-reveal mt-6 text-text-dim max-w-xl mx-auto">
           Open to internships, collaborations, and interesting problems. Reach
