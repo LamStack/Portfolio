@@ -12,6 +12,8 @@
   --violet: #a78bfa;
   --pink: #ff6fb0;
   --amber: #ffcf6b;
+  --lime: #baff5e;
+  --orange: #ff8a4c;
 }
 
 @theme inline {
@@ -24,6 +26,8 @@
   --color-violet: var(--violet);
   --color-pink: var(--pink);
   --color-amber: var(--amber);
+  --color-lime: var(--lime);
+  --color-orange: var(--orange);
   --font-display: var(--font-space-grotesk);
   --font-sans: var(--font-inter);
 }
@@ -32,15 +36,17 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
+}
+
+html.custom-cursor,
+html.custom-cursor a,
+html.custom-cursor button {
+  cursor: none;
 }
 
 h1, h2, h3, h4, .font-display {
