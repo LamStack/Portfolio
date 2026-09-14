@@ -13,7 +13,7 @@ const auctor = projects.find((p) => p.name === "Auctor")!;
 
 const STATS = [
   { label: "Role", value: "Founder & Builder" },
-  { label: "Result", value: "Semi-Finalist, Startup Bahrain" },
+  { label: "Result", value: "Finalist, Startup Bahrain" },
   { label: "Stack", value: "Next.js, Claude API, Postgres" },
 ];
 

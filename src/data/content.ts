@@ -52,7 +52,7 @@ export const achievements = [
     org: "Startup Bahrain",
     date: "May 2026",
     description:
-      "Semi-finalist for developing Auctor, an AI ecosystem redefining hiring through real-world problem-solving analysis. Placed 4th and won the DOO Automation Award along the way.",
+      "Finalist for developing Auctor, an AI ecosystem redefining hiring through real-world problem-solving analysis. Placed 4th and won the DOO Automation Award along the way.",
     image: "/images/award-doo.jpg",
   },
   {

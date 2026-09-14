@@ -99,7 +99,7 @@ export function Hero() {
               <Image src="/images/profile.jpg" alt="Lamees Adel" fill priority sizes="320px" className="object-cover" />
             </div>
             <div className="hero-badge absolute -bottom-5 -left-8 rounded-2xl bg-lime text-bg px-4 py-2.5 text-xs font-bold shadow-xl -rotate-6">
-              Semi-Finalist, Startup Bahrain
+              Finalist, Startup Bahrain
             </div>
             <div className="hero-badge absolute -top-4 -right-6 rounded-2xl bg-pink text-bg px-4 py-2.5 text-xs font-bold shadow-xl rotate-6">
               1st Place, Senior Projects

@@ -17,7 +17,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Claude API", "Monaco Editor"],
     repo: "https://github.com/LamStack/Auctor",
     live: "https://auctor-eta.vercel.app",
-    highlight: "Semi-Finalist, Startup Bahrain",
+    highlight: "Finalist, Startup Bahrain",
   },
   {
     name: "Wafid",
