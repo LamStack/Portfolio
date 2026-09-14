@@ -22,12 +22,14 @@ export function Contact() {
         ease: "power3.out",
         scrollTrigger: { trigger: root.current, start: "top 75%" },
       });
-      gsap.to(".contact-blob", {
-        rotate: 360,
-        duration: 40,
-        repeat: -1,
-        ease: "none",
-      });
+      if (!window.matchMedia("(max-width: 767px)").matches) {
+        gsap.to(".contact-blob", {
+          rotate: 360,
+          duration: 40,
+          repeat: -1,
+          ease: "none",
+        });
+      }
       return () => ScrollTrigger.getAll().forEach((t) => t.kill());
     },
     { scope: root }

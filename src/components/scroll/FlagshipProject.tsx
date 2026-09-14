@@ -24,63 +24,42 @@ export function FlagshipProject() {
   useGSAP(
     () => {
       const isMobile = window.matchMedia("(max-width: 767px)").matches;
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: wrapperRef.current,
-          start: "top top",
-          end: isMobile ? "+=1300" : "+=2200",
-          scrub: 1,
-          pin: pinRef.current,
-        },
-      });
 
-      tl.fromTo(
-        ".flagship-wash",
-        { opacity: 0 },
-        { opacity: 1, duration: 1.2 }
-      )
+      const tl = gsap.timeline(
+        isMobile
+          ? {
+              scrollTrigger: { trigger: wrapperRef.current, start: "top 80%" },
+              defaults: { ease: "power2.out" },
+            }
+          : {
+              scrollTrigger: {
+                trigger: wrapperRef.current,
+                start: "top top",
+                end: "+=2200",
+                scrub: 1,
+                pin: pinRef.current,
+              },
+            }
+      );
+
+      tl.fromTo(".flagship-wash", { opacity: 0 }, { opacity: 1, duration: isMobile ? 0.6 : 1.2 })
         .fromTo(
           ".flagship-card",
-          { scale: 0.55, opacity: 0, rotate: -4 },
-          { scale: 1, opacity: 1, rotate: 0, duration: 1.4, ease: "power3.out" },
-          "-=0.9"
+          { scale: isMobile ? 0.85 : 0.55, opacity: 0, rotate: -4 },
+          { scale: 1, opacity: 1, rotate: 0, duration: isMobile ? 0.7 : 1.4, ease: "power3.out" },
+          isMobile ? "-=0.3" : "-=0.9"
         )
-        .fromTo(
-          ".flagship-eyebrow",
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7 },
-          "-=0.6"
-        )
-        .fromTo(
-          ".flagship-title",
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9 },
-          "-=0.5"
-        )
-        .fromTo(
-          ".flagship-copy",
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.8 },
-          "-=0.6"
-        )
+        .fromTo(".flagship-eyebrow", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7 }, "-=0.6")
+        .fromTo(".flagship-title", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9 }, "-=0.5")
+        .fromTo(".flagship-copy", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, "-=0.6")
         .fromTo(
           ".flagship-stat",
           { x: -30, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.6, stagger: 0.12 },
           "-=0.5"
         )
-        .fromTo(
-          ".flagship-tag",
-          { y: 16, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, stagger: 0.06 },
-          "-=0.4"
-        )
-        .fromTo(
-          ".flagship-cta",
-          { y: 16, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, stagger: 0.1 },
-          "-=0.3"
-        );
+        .fromTo(".flagship-tag", { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.06 }, "-=0.4")
+        .fromTo(".flagship-cta", { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.1 }, "-=0.3");
 
       return () => ScrollTrigger.getAll().forEach((t) => t.kill());
     },
@@ -89,16 +68,19 @@ export function FlagshipProject() {
 
   return (
     <section id="flagship" ref={wrapperRef} className="relative">
-      <div ref={pinRef} className="relative h-screen overflow-hidden flex items-center">
+      <div
+        ref={pinRef}
+        className="relative md:h-screen overflow-hidden flex items-center py-20 md:py-0"
+      >
         <div className="flagship-wash absolute inset-0 bg-gradient-to-br from-[#0b1030] via-[#0e1440] to-[#04070f]" />
         <div className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-cyan/25 blur-[110px]" />
         <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet/25 blur-[110px]" />
         <div className="absolute inset-0 grid-fade opacity-60" />
 
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center w-full">
-          <div className="flagship-card relative mx-auto w-full max-w-sm">
+          <div className="flagship-card relative mx-auto w-full max-w-[220px] sm:max-w-sm">
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-cyan via-violet to-pink opacity-60 blur-2xl" />
-            <div className="relative rounded-[2.5rem] bg-white p-10 shadow-2xl">
+            <div className="relative rounded-[2.5rem] bg-white p-6 sm:p-10 shadow-2xl">
               <div className="relative aspect-square">
                 <Image src="/images/auctor-logo.png" alt="Auctor logo" fill className="object-contain" />
               </div>
@@ -109,7 +91,7 @@ export function FlagshipProject() {
             <span className="flagship-eyebrow inline-flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-cyan uppercase">
               Flagship project
             </span>
-            <h2 className="flagship-title font-display mt-4 text-4xl sm:text-5xl font-bold leading-[1.02]">
+            <h2 className="flagship-title font-display mt-4 text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.05] md:leading-[1.02]">
               {auctor.name}: {auctor.tagline}
             </h2>
             <p className="flagship-copy mt-5 max-w-lg text-text-dim text-base sm:text-lg leading-relaxed">

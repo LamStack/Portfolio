@@ -27,8 +27,10 @@ export function Hero() {
         .from(".hero-photo", { scale: 0.8, opacity: 0, rotate: -6, duration: 1 }, "-=1")
         .from(".hero-badge", { scale: 0, opacity: 0, duration: 0.6, stagger: 0.1 }, "-=0.5");
 
-      gsap.to(".hero-blob-1", { y: 60, x: 30, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" });
-      gsap.to(".hero-blob-2", { y: -50, x: -40, duration: 10, repeat: -1, yoyo: true, ease: "sine.inOut" });
+      if (!window.matchMedia("(max-width: 767px)").matches) {
+        gsap.to(".hero-blob-1", { y: 60, x: 30, duration: 8, repeat: -1, yoyo: true, ease: "sine.inOut" });
+        gsap.to(".hero-blob-2", { y: -50, x: -40, duration: 10, repeat: -1, yoyo: true, ease: "sine.inOut" });
+      }
     },
     { scope: root }
   );
@@ -81,7 +83,7 @@ export function Hero() {
                 Play a game
               </a>
             </Magnetic>
-            <div className="hero-cta flex items-center gap-4 pl-2 text-text-dim">
+            <div className="hero-cta w-full sm:w-auto flex items-center gap-4 pt-1 sm:pt-0 sm:pl-2 text-text-dim">
               <a href={socials.github} target="_blank" rel="noreferrer" className="hover:text-cyan transition" aria-label="GitHub">
                 <FaGithub size={19} />
               </a>
