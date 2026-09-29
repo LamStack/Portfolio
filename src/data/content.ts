@@ -7,11 +7,11 @@ export const experience = [
       "Led a team of students to present and demonstrate a group of projects at GITEX Global 2025, including an Azure AI language-learning chatbot. Engaged visitors, explained technical concepts to both technical and non-technical audiences, and represented the project in a professional environment.",
   },
   {
-    role: "Automation Intern",
+    role: "AI Builder",
     org: "DOO (Builders League Program)",
-    period: "Aug 2 to Sep 2, 2026",
+    period: "Aug 4 to Sep 4, 2026 · 1 month",
     description:
-      "One-month internship with DOO's Builders League program, building automation-focused prototypes and shipping working demos under real time constraints.",
+      "One-month internship with DOO's Builders League program, building AI-powered prototypes and shipping working demos under real time constraints.",
   },
 ];
 
@@ -148,5 +148,4 @@ export const socials = {
   github: "https://github.com/LamStack",
   linkedin: "https://www.linkedin.com/in/lamees-adel/",
   email: "lamees1dawood@outlook.com",
-  cv: "/cv/Lamees-Adel-CV.pdf",
 };

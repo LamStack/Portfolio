@@ -14,7 +14,7 @@ const timeline = [
   volunteering[3], // Exhibitor Volunteer, BITEX, 2025
   experience[0], // Project Coordinator, GITEX, 2025
   volunteering[2], // Student Volunteer, UoB, 2025/2026
-  experience[1], // Automation Intern, DOO, Aug 2026
+  experience[1], // AI Builder, DOO, Aug 2026
   volunteering[0], // Volunteer Guide & Organizer, UoB, 2026 to 2027
 ];
 

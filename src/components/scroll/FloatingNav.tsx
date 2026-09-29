@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Download, Menu, X } from "lucide-react";
-import { socials } from "@/data/content";
+import { Menu, X } from "lucide-react";
 
 const LINKS = [
   { href: "#about", label: "About" },
@@ -67,16 +66,6 @@ export function FloatingNav() {
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href={socials.cv}
-                download
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm text-cyan hover:bg-white/5 transition"
-              >
-                <Download size={14} /> Download CV
-              </a>
-            </li>
           </ul>
         </div>
       )}

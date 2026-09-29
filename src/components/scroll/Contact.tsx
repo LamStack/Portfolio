@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Download, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { socials } from "@/data/content";
 import { Magnetic } from "./Magnetic";
@@ -61,13 +61,6 @@ export function Contact() {
               <Mail size={16} /> {socials.email}
             </a>
           </Magnetic>
-          <a
-            href={socials.cv}
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm hover:border-cyan/60 transition"
-          >
-            <Download size={16} /> Download CV
-          </a>
         </div>
 
         <div className="contact-reveal mt-10 flex items-center justify-center gap-6 text-text-dim">
