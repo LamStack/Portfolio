@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -52,14 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
     >
-      <body className="bg-bg text-text">
-        {children}
-        <Script
-          src="http://localhost:3000/experience.js"
-          data-key="wk_EqVg_bK3VFpoaokVOprY43an"
-          strategy="afterInteractive"
-        />
-      </body>
+      <body className="bg-bg text-text">{children}</body>
     </html>
   );
 }
