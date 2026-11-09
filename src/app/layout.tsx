@@ -51,7 +51,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
     >
-      <body className="bg-bg text-text">{children}</body>
+      <body className="bg-bg text-text">
+        {children}
+        <script
+          src="https://dev.wzrd.to/experience.js"
+          data-key="wk_DiUQ8xiM_lBi4CbiXrHIWGFy"
+          async
+        ></script>
+      </body>
     </html>
   );
 }
